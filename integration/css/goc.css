@@ -9,6 +9,10 @@
   color: #333333;
   /*** General Rules ***/
   /*** Layout ***/
+  /*** body ***/
+  background: #007399;
+  margin: auto;
+  /*** Content ***/
 }
 @font-face {
   font-family: 'PT Sans';
@@ -41,19 +45,34 @@
   font-weight: normal;
   font-style: normal;
 }
+.k1 h1 {
+  color: #ffffff;
+  font-size: 2.6em;
+  line-height: 75px;
+  padding: 0 ;
+  text-align: center;
+  margin: 0;
+}
+.k1 h2 {
+  color: #00537b;
+  font-size: 1.6em;
+  font-weight: 700;
+  padding: 0;
+  margin: .5em 0;
+}
+.k1 p {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
 .k1 ul,
 .k1 li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.k1 h2 {
-  color: #00537b;
-}
-.k1 p {
-  line-height: 1em;
-  margin: 0;
-  padding: 0;
+.k1 * {
+  box-sizing: border-box;
 }
 @media screen and (max-width: 769px) {
   .k1 .left,
@@ -62,13 +81,33 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .k1 .content-root {
+    width: 75%;
+    margin: auto;
+  }
   .k1 .left {
     width: 35%;
     float: left;
   }
   .k1 .right {
-    width: 64%;
+    width: 65%;
+    float: left;
   }
+}
+.k1 header {
+  width: 100%;
+  height: 75px;
+  background: #00537b;
+  margin-bottom: 1em;
+  border: 1px solid #d1e5f6;
+}
+.k1 .module {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  border: 1px solid #00537b;
 }
 .k1 .map img {
   width: 100%;
@@ -78,11 +117,15 @@
   background: #00537b;
   color: #ffffff;
   font-weight: 700;
+  border: 1px solid #ffffff;
   padding: .5em 1em;
   border-radius: 5px;
   margin-right: .5em;
   cursor: pointer;
 }
 .k1 .filters ul li:hover {
+  background: #ea5b0c;
+}
+.k1 .filters ul li[checked="true"] {
   background: #ea5b0c;
 }

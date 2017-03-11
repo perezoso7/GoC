@@ -1,6 +1,3 @@
-html {}
-
-
 /*** Root ***/
 
 .k1 {
@@ -63,18 +60,33 @@ html {}
     font-family: @pt;
     color:@COLOR_Main;
     /*** General Rules ***/
-    ul,
+   
+    h1 {
+        color: @COLOR_White;
+        font-size: 2.6em;
+        line-height: 75px;
+        padding: 0 ;text-align: center;
+        margin: 0;
+    }
+    h2 {
+        color: @COLOR_Blue;
+        font-size: 1.6em;
+        font-weight: 700;
+        padding: 0;
+        margin: .5em 0;
+    }
+    p {
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
+    }
+     ul,
     li {
         padding: 0;
         margin: 0;
         list-style-type: none
     }
-    h2 {
-        color: @COLOR_Blue;
-    }
-    p {
-        line-height: 1em;margin:0;padding:0;
-    }
+    *{box-sizing: border-box}
     /*** Layout ***/
     @media screen and (max-width: 769px) {
         .left,
@@ -83,13 +95,36 @@ html {}
         }
     }
     @media screen and (min-width: 768px) {
+        .content-root {
+            width: 75%;margin:auto;
+        }
         .left {
             width: 35%;
             float: left
         }
         .right {
-            width: 64%;
+            width: 65%;
+            float: left
         }
+    }
+    /*** body ***/
+    background:@COLOR_BlueMedium;
+    margin:auto;
+    /*** Content ***/
+    header {
+        width: 100%;
+        height: 75px;
+        background: @COLOR_Blue;
+        margin-bottom: 1em;
+        border: 1px solid @COLOR_BlueLight;
+    }
+    .module {
+        display: block;
+        overflow: hidden;
+        background: @COLOR_White;
+        padding: .5em 1em;
+        border-radius: 5px;
+        border: 1px solid @COLOR_Blue;
     }
     .map {
         svg {}
@@ -108,12 +143,15 @@ html {}
                 background: @COLOR_Blue;
                 color: @COLOR_White;
                 font-weight: 700;
-              // border: 1px solid @COLOR_Orange;
+                border: 1px solid @COLOR_White;
                 padding: .5em 1em;
                 border-radius: 5px;
                 margin-right: .5em;
                 cursor: pointer;
                 &:hover {
+                    background: @COLOR_Orange;
+                }
+                &[checked="true"] {
                     background: @COLOR_Orange;
                 }
             }
