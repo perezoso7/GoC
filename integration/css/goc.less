@@ -60,12 +60,12 @@
     font-family: @pt;
     color:@COLOR_Main;
     /*** General Rules ***/
-   
     h1 {
         color: @COLOR_White;
         font-size: 2.6em;
         line-height: 75px;
-        padding: 0 ;text-align: center;
+        padding: 0;
+        text-align: center;
         margin: 0;
     }
     h2 {
@@ -80,13 +80,15 @@
         margin: 0;
         padding: 0;
     }
-     ul,
+    ul,
     li {
         padding: 0;
         margin: 0;
         list-style-type: none
     }
-    *{box-sizing: border-box}
+    * {
+        box-sizing: border-box
+    }
     /*** Layout ***/
     @media screen and (max-width: 769px) {
         .left,
@@ -96,14 +98,15 @@
     }
     @media screen and (min-width: 768px) {
         .content-root {
-            width: 75%;margin:auto;
+            width: 75%;
+            margin: auto;
         }
         .left {
-            width: 35%;
+            width: 50%;
             float: left
         }
         .right {
-            width: 65%;
+            width: 50%;
             float: left
         }
     }
@@ -127,7 +130,17 @@
         border: 1px solid @COLOR_Blue;
     }
     .map {
-        svg {}
+        width: 100%;
+        svg {
+            width: 100%;
+            height: auto;
+            left:0;
+            top:0;
+         //   rect{width:100%;}
+            #Map {
+                width: 100%;
+            }
+        }
         img {
             width: 100%;
         }

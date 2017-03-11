@@ -49,7 +49,7 @@
   color: #ffffff;
   font-size: 2.6em;
   line-height: 75px;
-  padding: 0 ;
+  padding: 0;
   text-align: center;
   margin: 0;
 }
@@ -86,11 +86,11 @@
     margin: auto;
   }
   .k1 .left {
-    width: 35%;
+    width: 50%;
     float: left;
   }
   .k1 .right {
-    width: 65%;
+    width: 50%;
     float: left;
   }
 }
@@ -108,6 +108,18 @@
   padding: .5em 1em;
   border-radius: 5px;
   border: 1px solid #00537b;
+}
+.k1 .map {
+  width: 100%;
+}
+.k1 .map svg {
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+.k1 .map svg #Map {
+  width: 100%;
 }
 .k1 .map img {
   width: 100%;
