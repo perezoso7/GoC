@@ -1,3 +1,122 @@
-html{
-    
+html {}
+
+
+/*** Root ***/
+
+.k1 {
+    /*** Fonts ***/
+    @font-face {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('PT Sans'), local('PTSans-Regular'), url(../fonts/LKf8nhXsWg5ybwEGXk8UBQ.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 700;
+        src: local('PT Sans Bold'), local('PTSans-Bold'), url(../fonts/0XxGQsSc1g4rdRdjJKZrNBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        font-style: italic;
+        font-weight: 400;
+        src: local('PT Sans Italic'), local('PTSans-Italic'), url(../fonts/PIPMHY90P7jtyjpXuZ2cLD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        font-style: italic;
+        font-weight: 700;
+        src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(../fonts/lILlYDvubYemzYzN7GbLkHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'FontAwesome';
+        src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+        src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* COLOR */
+    @COLOR_Main: #333;
+    @COLOR_Blue: rgba(0,
+    83,
+    123,
+    1.0);
+    @COLOR_BlueDemi: rgba(0,
+    83,
+    123,
+    0.8);
+    @COLOR_BlueTrans: rgba(0,
+    83,
+    123,
+    0.7);
+    @COLOR_BlueMedium: #007399;
+    @COLOR_BlueLight: #D1E5F6;
+    @COLOR_Orange: #EA5B0C;
+    @COLOR_OrangeLight: #F18823;
+    @COLOR_White: #fff;
+    /*Formations*/
+    /* Call FONTS */
+    @pt: 'Pt Sans';
+    @fa: 'FontAwesome';
+    font-size: 16px;
+    font-family: @pt;
+    color:@COLOR_Main;
+    /*** General Rules ***/
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none
+    }
+    h2 {
+        color: @COLOR_Blue;
+    }
+    p {
+        line-height: 1em;margin:0;padding:0;
+    }
+    /*** Layout ***/
+    @media screen and (max-width: 769px) {
+        .left,
+        .right {
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .left {
+            width: 35%;
+            float: left
+        }
+        .right {
+            width: 64%;
+        }
+    }
+    .map {
+        svg {}
+        img {
+            width: 100%;
+        }
+    }
+    .filters {
+        .filterheader {
+            h2 {}
+        }
+        ul {
+            li {
+                // width: 150px;
+                float: left;
+                background: @COLOR_Blue;
+                color: @COLOR_White;
+                font-weight: 700;
+              // border: 1px solid @COLOR_Orange;
+                padding: .5em 1em;
+                border-radius: 5px;
+                margin-right: .5em;
+                cursor: pointer;
+                &:hover {
+                    background: @COLOR_Orange;
+                }
+            }
+        }
+    }
 }
